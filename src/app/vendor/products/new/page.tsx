@@ -13,7 +13,7 @@ export default function ProductUploadPage() {
   useEffect(() => {
     async function loadCategories() {
       const res = await getCategories();
-      if (res.success) setCategories(res.data);
+      if (res.success && res.data) setCategories(res.data);
     }
     loadCategories();
   }, []);

@@ -11,7 +11,7 @@ export function CategoryGrid() {
   useEffect(() => {
     async function load() {
       const res = await getCategories();
-      if (res.success) setCategories(res.data);
+      if (res.success && res.data) setCategories(res.data);
     }
     load();
   }, []);
@@ -47,7 +47,7 @@ export function MegaMenu() {
   useEffect(() => {
     async function load() {
       const res = await getCategories();
-      if (res.success) setCategories(res.data);
+      if (res.success && res.data) setCategories(res.data);
     }
     load();
   }, []);

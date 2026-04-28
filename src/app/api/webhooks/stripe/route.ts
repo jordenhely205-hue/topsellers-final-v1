@@ -4,6 +4,8 @@ import { stripe } from '@/lib/stripe';
 import { prisma } from '@/lib/prisma';
 import { sendNotification } from '@/lib/serverNotify';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
   const body = await req.text();
   const signature = (await headers()).get('Stripe-Signature') as string;
@@ -14,7 +16,7 @@ export async function POST(req: Request) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      process.env.STRIPE_WEBHOOK_SECRET || 'dummy_webhook_secret'
     );
   } catch (error: any) {
     return new NextResponse(`Webhook Error: ${error.message}`, { status: 400 });
