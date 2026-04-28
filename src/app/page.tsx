@@ -50,9 +50,21 @@ export default function HomePage() {
         <CategoryGrid />
       </section>
 
-      {/* Trust & Footer Footer */}
-      <footer className="py-12 border-t border-white/5 text-center text-zinc-600 text-xs uppercase tracking-[0.3em]">
-         © 2026 Top Seller Store eBay • Premium Multi-Vendor Ecosystem
+      {/* Trust & Footer Section */}
+      <footer className="py-20 border-t border-white/5 bg-[#010413]">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col items-center gap-8 mb-12">
+            <img src="/assets/trust-badges.png" alt="Payment Security" className="h-16 object-contain opacity-80" />
+            <div className="flex gap-12 text-zinc-500 text-[10px] font-bold uppercase tracking-[0.4em]">
+              <span>Secure Transactions</span>
+              <span>Global Logistics</span>
+              <span>24/7 Support</span>
+            </div>
+          </div>
+          <div className="text-center text-zinc-700 text-[10px] uppercase tracking-[0.5em] font-medium">
+             © 2026 Top Seller Store eBay • The Gold Standard of Commerce
+          </div>
+        </div>
       </footer>
     </main>
   );
