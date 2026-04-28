@@ -1,17 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
+import React from 'react';
 
 interface StatCardProps {
   title: string;
   value: string;
-  icon: LucideIcon;
+  icon: React.ReactNode;
   trend?: string;
   trendUp?: boolean;
 }
 
-export default function StatCard({ title, value, icon: Icon, trend, trendUp }: StatCardProps) {
+export default function StatCard({ title, value, icon, trend, trendUp }: StatCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -35,8 +35,8 @@ export default function StatCard({ title, value, icon: Icon, trend, trendUp }: S
           )}
         </div>
         
-        <div className="p-3 rounded-lg bg-white/5 border border-white/10">
-          <Icon size={24} className="text-blue-400" />
+        <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-blue-400 flex items-center justify-center">
+          {icon}
         </div>
       </div>
     </motion.div>

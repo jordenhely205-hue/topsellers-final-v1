@@ -31,10 +31,10 @@ export default function VendorAnalytics() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard title="Net Sales" value="$14,500.00" icon={DollarSign} trend="8.2%" trendUp={true} />
-        <StatCard title="Orders" value="128" icon={Package} trend="12%" trendUp={true} />
-        <StatCard title="Low Stock Items" value="3" icon={AlertTriangle} trendUp={false} />
-        <StatCard title="Popularity" value="4.8/5" icon={TrendingUp} />
+        <StatCard title="Net Sales" value="$14,500.00" icon={<DollarSign size={24} />} trend="8.2%" trendUp={true} />
+        <StatCard title="Orders" value="128" icon={<Package size={24} />} trend="12%" trendUp={true} />
+        <StatCard title="Low Stock Items" value="3" icon={<AlertTriangle size={24} />} trendUp={false} />
+        <StatCard title="Popularity" value="4.8/5" icon={<TrendingUp size={24} />} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

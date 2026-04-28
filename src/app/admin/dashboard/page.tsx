@@ -18,40 +18,40 @@ export default function AdminDashboard() {
         <StatCard 
           title="Total Revenue" 
           value="$1,240,500.00" 
-          icon={DollarSign} 
+          icon={<DollarSign size={24} />} 
           trend="12.5%" 
           trendUp={true} 
         />
         <StatCard 
           title="Total Commission" 
           value="$124,050.00" 
-          icon={Percent} 
+          icon={<Percent size={24} />} 
           trend="12.5%" 
           trendUp={true} 
         />
         <StatCard 
           title="Active Vendors" 
           value="142" 
-          icon={Users} 
+          icon={<Users size={24} />} 
           trend="5" 
           trendUp={true} 
         />
         <StatCard 
           title="New Registrations" 
           value="24" 
-          icon={UserPlus} 
+          icon={<UserPlus size={24} />} 
           trend="2" 
           trendUp={true} 
         />
         <StatCard 
           title="Pending Orders" 
           value="3,412" 
-          icon={PackageSearch} 
+          icon={<PackageSearch size={24} />} 
         />
         <StatCard 
           title="Payout Requests" 
           value="$45,200.00" 
-          icon={CreditCard} 
+          icon={<CreditCard size={24} />} 
         />
       </div>
 
