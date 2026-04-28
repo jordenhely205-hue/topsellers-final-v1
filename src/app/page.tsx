@@ -1,5 +1,6 @@
 import Hero from '@/components/home/Hero';
 import { CategoryGrid, MegaMenu } from '@/components/shared/CategoryDisplay';
+import FeaturedProducts from '@/components/home/ProductGrid';
 import { CurrencySwitcher } from '@/components/shared/PaymentUI';
 import { ShoppingCart, User } from 'lucide-react';
 import Link from 'next/link';
@@ -38,16 +39,31 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <Hero />
 
       {/* Category Grid Section */}
       <section className="py-24 container mx-auto px-6">
         <div className="flex flex-col items-center text-center mb-16 space-y-4">
-           <h2 className="text-4xl md:text-5xl font-black text-white">Explore Our <span className="text-orange-500">World</span></h2>
-           <p className="text-zinc-500 max-w-xl">Browse through our unlimited categories powered by dynamic attributes and high-speed delivery.</p>
+           <h2 className="text-4xl md:text-5xl font-black text-white">Explore Our <span className="text-gradient">World</span></h2>
+           <p className="text-zinc-500 max-w-xl">Browse through our unlimited categories powered by dynamic attributes.</p>
         </div>
         <CategoryGrid />
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-24 bg-[#010413] border-y border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-between items-end mb-16">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-black text-white">Trending <span className="text-orange-500">Deals</span></h2>
+              <p className="text-zinc-500">The most wanted products from our top-rated sellers.</p>
+            </div>
+            <button className="px-8 py-3 rounded-full border border-white/10 text-white font-bold hover:bg-white/5 transition-all">
+              View All Products
+            </button>
+          </div>
+          <FeaturedProducts />
+        </div>
       </section>
 
       {/* Trust & Footer Section */}
