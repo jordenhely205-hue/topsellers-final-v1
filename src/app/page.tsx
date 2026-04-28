@@ -11,9 +11,14 @@ export default function HomePage() {
       <nav className="fixed top-0 left-0 right-0 h-20 glass border-b border-white/5 z-[100] flex items-center">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-2xl font-black italic text-white flex items-center gap-2">
-               <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center text-background font-black not-italic">TS</div>
-               TOP SELLER <span className="text-orange-500">STORE</span>
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative h-12 w-48 transition-transform duration-300 group-hover:scale-105">
+                <img 
+                  src="/assets/logo.png" 
+                  alt="Top Seller Store Logo" 
+                  className="h-full w-full object-contain"
+                />
+              </div>
             </Link>
             <div className="hidden md:block">
               <MegaMenu />
